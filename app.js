@@ -9,15 +9,24 @@ $(document).ready(function() {
 		// make sure span is empty before clearing message
 		if (!$('span').is(':empty')) $('span').html('');
 
+
+	
 		// check if number is integer
 		if (number % 1 === 0) {
-			appendFizzBuzz(number);
+		 // check if number is positive
+		  if (number > 0) {
+		    appendFizzBuzz(number);
+		  } else {
+		    $('span').append('Input cannot be negative value!');
+		  }   
 		} else {
-			$('span').append('Input must be an integer.');
+		  $('span').append('Input must be an integer.');
 		}
+
 
 	});
 });
+
  
 /**
  * This function pushes the results to the page
