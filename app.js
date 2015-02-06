@@ -13,12 +13,25 @@ $(document).ready(function() {
 	
 		// check if number is integer
 		if (number % 1 === 0) {
+
 		 // check if number is positive
 		  if (number > 0) {
-		    appendFizzBuzz(number);
+
+		  		// check if number less than 101
+				if (number < 101) {
+		  		appendFizzBuzz(number);
+		  		} else {
+		  		$('span').append('Input cannot be a number greater than 100!');
+		  		}
+
+		    
 		  } else {
 		    $('span').append('Input cannot be negative value!');
-		  }   
+		  }
+
+		 
+		  
+
 		} else {
 		  $('span').append('Input must be an integer.');
 		}
